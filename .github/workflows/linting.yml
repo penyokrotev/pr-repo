@@ -5,12 +5,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          npm install
-          npm run lint
+          echo install lint packages
+          echo start linting
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
-          npm install
-          npm test
+          echo install test packages
+          echo start testing
