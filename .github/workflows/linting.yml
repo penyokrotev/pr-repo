@@ -1,4 +1,5 @@
-#This pipeline only runs jobs at parallel, not steps. Because according to here - https://github.community/t/steps-in-parallel/16343 "Only jobs can run in parallel, but steps always run sequentially. I don’t know if there are any plans to ever support this. "
+#This pipeline only runs jobs at parallel, not steps. Because according to here:
+# https://github.community/t/steps-in-parallel/16343 - "Only jobs can run in parallel, but steps always run sequentially. I don’t know if there are any plans to ever support this. "
 on: push
 jobs:
   lint:
