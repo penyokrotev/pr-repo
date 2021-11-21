@@ -1,0 +1,15 @@
+name: Pipeline Name
+on:
+  push:
+  pull_request:
+    branches: main
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    # if: always()
+    steps:
+      - name: Send a Notification
+        uses: thechetantalwar/teams-notify@v2
+        with:
+          teams_webhook_url: ${{ secrets.TEAM_HOOK }}
+          message: "Github Action Build Number ${{ github.run_number }} Completed for ${{ github.repository }} and the outcome is  ${{ needs.build.result }}."
